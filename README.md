@@ -1,19 +1,26 @@
-# FHEVM React Template
+# 🧠 FHEVM Quiz
 
-A minimal React frontend template for building FHEVM-enabled decentralized applications (dApps). This template provides a simple development interface for interacting with FHEVM smart contracts, specifically the `FHECounter.sol` contract.
+A minimal **React-based decentralized application (dApp)** built with **Fully Homomorphic Encryption (FHE)** technology.  
+This project demonstrates how to build and interact with smart contracts deployed on the **FHEVM**, specifically the `FHEZamaQuiz.sol` contract.
 
-## 🚀 What is FHEVM?
+---
 
-FHEVM (Fully Homomorphic Encryption Virtual Machine) enables computation on encrypted data directly on Ethereum. This template demonstrates how to build dApps that can perform computations while keeping data private.
+## 🚀 Overview
 
-## ✨ Features
+This project showcases how to use **Zama’s FHEVM** to create a privacy-preserving quiz dApp.  
+Each user can submit **one encrypted answer**, which is stored securely on-chain in encrypted form (`euint32`).  
+Only the user and the contract can decrypt and view the actual answer.
 
-- **🔐 FHEVM Integration**: Built-in support for fully homomorphic encryption
-- **⚛️ React + Next.js**: Modern, performant frontend framework
-- **🎨 Tailwind CSS**: Utility-first styling for rapid UI development
-- **🔗 RainbowKit**: Seamless wallet connection and management
-- **🌐 Multi-Network Support**: Works on both Sepolia testnet and local Hardhat node
-- **📦 Monorepo Structure**: Organized packages for SDK, contracts, and frontend
+---
+
+### ✨ Key Features
+
+- 🔐 **Fully Homomorphic Encryption (FHE)** support — all answers are encrypted on-chain.
+- 🧩 **Zama FHEVM** integration via `@fhevm/solidity`.
+- ⚛️ **React + Vite** frontend template for rapid development.
+- 💬 Example contract interaction hooks (connect wallet, encrypt/decrypt, submit answer).
+
+---
 
 ## 📋 Prerequinextjss
 
@@ -124,7 +131,7 @@ For more details, see the [MetaMask development guide](https://docs.metamask.io/
 This template uses a monorepo structure with three main packages:
 
 ```
-fhevm-react-template/
+fhevm-quiz/
 ├── packages/
 │   ├── fhevm-hardhat-template/    # Smart contracts & deployment
 │   ├── fhevm-sdk/                 # FHEVM SDK package
@@ -134,8 +141,8 @@ fhevm-react-template/
 
 ### Key Components
 
-#### 🔗 FHEVM Integration (`packages/nextjs/hooks/fhecounter-example/`)
-- **`useFHECounterWagmi.tsx`**: Example hook demonstrating FHEVM contract interaction
+#### 🔗 FHEVM Integration (`packages/nextjs/hooks`)
+- **`useFHEZamaQuiz.tsx`**: Example hook demonstrating FHEVM contract interaction
 - Essential hooks for FHEVM-enabled smart contract communication
 - Easily copyable to any FHEVM + React project
 
